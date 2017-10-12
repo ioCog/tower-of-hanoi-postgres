@@ -1,0 +1,16 @@
+﻿////ioCog Bindings File
+////Tower of Hanoi
+////Rob Lewis
+////4 Aug 2017
+
+
+SQLConnection TowerDB (POSTGRESQL "Host=192.168.0.33;Username=postgres;Password=p@55w0rd;Database=hanoidb");
+
+SQLBind Disk (TowerDB, disk,
+	Mapping (Size size, Peg peg)
+);
+
+SQLBind Peg (TowerDB, peg,
+	Mapping (PegNumber peg)
+);
+
